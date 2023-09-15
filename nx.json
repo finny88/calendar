@@ -20,6 +20,12 @@
       "dependsOn": [
         "^build"
       ]
+    },
+    "start": {
+      "dependsOn": [
+        "^build",
+        "build"
+      ]
     }
   }
 }

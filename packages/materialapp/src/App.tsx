@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { ProTip } from 'protip';
-import { Copyright } from "copyright";
+import Copyright from 'copyrightapp/Copyright'
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
           Material UI Create React App example in TypeScript
         </Typography>
         <ProTip />
-        <Copyright />
+          <Copyright />
       </Box>
     </Container>
   );

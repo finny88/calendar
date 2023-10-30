@@ -1,5 +1,5 @@
 {
-  "name": "materialapp",
+  "name": "copyrightapp",
   "version": "5.0.0",
   "private": true,
   "dependencies": {
@@ -8,9 +8,6 @@
     "@mui/material": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "copyright": "*",
-    "express": "^4.18.2",
-    "protip": "*",
     "react": "latest",
     "react-dom": "latest",
     "react-scripts": "latest",
@@ -20,8 +17,7 @@
     "dev": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject",
-    "start": "node server.js"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [

@@ -32,7 +32,8 @@ module.exports = {
             },
             optimization: {
                 ...webpackConfig.optimization,
-                chunkIds: 'named'
+                chunkIds: 'named',
+                splitChunks: false,
             }
         }),
     },

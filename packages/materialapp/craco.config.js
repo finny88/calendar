@@ -24,7 +24,8 @@ module.exports = {
             ...webpackConfig,
             optimization: {
                 ...webpackConfig.optimization,
-                chunkIds: 'named'
+                chunkIds: 'named',
+                splitChunks: false,
             }
         }),
     },

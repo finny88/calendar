@@ -1,4 +1,5 @@
 const { ModuleFederationPlugin } = require("webpack").container;
+const deps = require('./package.json').dependencies
 
 module.exports = {
     webpack: {
@@ -10,10 +11,11 @@ module.exports = {
                         copyrightapp: "copyrightapp@http://localhost:3001/remoteEntry.js",
                     },
                     shared: {
-                        react: { singleton: true },
-                        "react-dom": { singleton: true },
-                        "@mui/material": { singleton: true },
-                        "@emotion/react": { singleton: true },
+                        react: { singleton: true, requiredVersion: deps['react'] },
+                        "react-dom": { singleton: true, requiredVersion: deps['react-dom'] },
+                        "@mui/material": { singleton: true, requiredVersion: deps['@mui/material'] },
+                        "@emotion/react": { singleton: true, requiredVersion: deps['@emotion/react'] },
+                        "@mui/system": { singleton: true, requiredVersion: '*' },
                     },
                 }),
             ],

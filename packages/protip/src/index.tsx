@@ -1,3 +1,0 @@
-export {
-  ProTip
-} from './ProTip';

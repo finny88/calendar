@@ -19,7 +19,8 @@ module.exports = {
                         "react-dom": { singleton: true, requiredVersion: deps['react-dom'] },
                         "@mui/material": { singleton: true, requiredVersion: deps['@mui/material'] },
                         "@emotion/react": { singleton: true, requiredVersion: deps['@emotion/react'] },
-                        "@mui/system": { singleton: true, requiredVersion: '*' },
+                        "tss-react/mui": { singleton: true, requiredVersion: deps['tss-react'] },
+                        "@mui/system": { singleton: true, requiredVersion: '*' }
                     },
                 }),
             ],

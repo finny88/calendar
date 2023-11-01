@@ -9,11 +9,11 @@ module.exports = {
         plugins: {
             add: [
                 new ModuleFederationPlugin({
-                    name: "materialapp",
-                    remotes: {
-                        copyrightapp: "copyrightapp@http://localhost:3001/remoteEntry.js",
-                        protipapp: "protipapp@http://localhost:3002/remoteEntry.js"
+                    name: "protipapp",
+                    exposes: {
+                        "./ProTip": "./src/ProTip",
                     },
+                    filename: "remoteEntry.js",
                     shared: {
                         react: { singleton: true, requiredVersion: deps['react'] },
                         "react-dom": { singleton: true, requiredVersion: deps['react-dom'] },
@@ -26,6 +26,10 @@ module.exports = {
         },
         configure: (webpackConfig) => ({
             ...webpackConfig,
+            output: {
+                ...webpackConfig.output,
+                publicPath: "auto",
+            },
             optimization: {
                 ...webpackConfig.optimization,
                 chunkIds: 'named',

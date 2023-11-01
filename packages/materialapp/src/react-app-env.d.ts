@@ -4,3 +4,9 @@ declare module "copyrightapp/Copyright" {
 
     export default Copyright
 }
+
+declare module "protipapp/ProTip" {
+    const ProTip: React.ComponentType
+
+    export default ProTip
+}

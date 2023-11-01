@@ -2,8 +2,8 @@ import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { ProTip } from 'protip';
 import Copyright from 'copyrightapp/Copyright'
+import ProTip from 'protipapp/ProTip'
 
 export default function App() {
   return (

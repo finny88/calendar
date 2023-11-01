@@ -4,6 +4,7 @@ const { dependencies: deps, config: { port } } = require('./package.json')
 module.exports = {
     devServer: {
         port,
+        open: false
     },
     webpack: {
         plugins: {

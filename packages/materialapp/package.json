@@ -2,6 +2,9 @@
   "name": "materialapp",
   "version": "5.0.0",
   "private": true,
+  "config": {
+    "port": "3000"
+  },
   "dependencies": {
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
@@ -9,11 +12,11 @@
     "@types/react": "17.0.65",
     "@types/react-dom": "18.2.7",
     "copyright": "*",
-    "express": "4.18.2",
     "protip": "*",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-scripts": "5.0.1",
+    "serve": "14.2.1",
     "typescript": "4.9.5"
   },
   "scripts": {
@@ -21,7 +24,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "start": "node server.js"
+    "start": "serve -s build -p %npm_package_config_port%"
   },
   "browserslist": {
     "production": [

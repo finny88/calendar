@@ -1,9 +1,9 @@
 const { ModuleFederationPlugin } = require("webpack").container;
-const deps = require('./package.json').dependencies
+const { dependencies: deps, config: { port } } = require('./package.json')
 
 module.exports = {
     devServer: {
-        port: 3001,
+        port,
     },
     webpack: {
         plugins: {

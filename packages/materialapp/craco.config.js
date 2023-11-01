@@ -1,7 +1,10 @@
 const { ModuleFederationPlugin } = require("webpack").container;
-const deps = require('./package.json').dependencies
+const { dependencies: deps, config: { port } } = require('./package.json')
 
 module.exports = {
+    devServer: {
+        port,
+    },
     webpack: {
         plugins: {
             add: [

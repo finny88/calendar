@@ -4,11 +4,20 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Copyright from 'copyrightapp/Copyright'
 import ProTip from 'protipapp/ProTip'
+import { makeStyles } from "tss-react/mui";
+
+const useStyles = makeStyles()(theme => ({
+    box: {
+        margin: theme.spacing(4, 0)
+    }
+}))
 
 export default function App() {
+  const { classes } = useStyles()
+
   return (
     <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
+      <Box className={classes.box}>
         <Typography variant="h4" component="h1" gutterBottom>
           Material UI Create React App example in TypeScript
         </Typography>

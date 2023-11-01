@@ -2,6 +2,7 @@ import * as React from 'react';
 import Link from '@mui/material/Link';
 import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
 import Typography from '@mui/material/Typography';
+import { makeStyles } from "tss-react/mui";
 
 function LightBulbIcon(props: SvgIconProps) {
   return (
@@ -11,10 +12,24 @@ function LightBulbIcon(props: SvgIconProps) {
   );
 }
 
+const useStyles = makeStyles()(theme => ({
+    root: {
+        marginBottom: theme.spacing(6),
+        marginTop: theme.spacing(3),
+        color: theme.palette.text.secondary
+    },
+    icon: {
+        marginRight: theme.spacing(1),
+        verticalAlign: 'middle'
+    }
+}))
+
 export default function ProTip() {
+  const { classes } = useStyles()
+
   return (
-    <Typography sx={{ mt: 6, mb: 3 }} color="text.secondary">
-      <LightBulbIcon sx={{ mr: 1, verticalAlign: 'middle' }} />
+    <Typography className={classes.root}>
+      <LightBulbIcon className={classes.icon} />
       Pro tip: See more{' '}
       <Link href="https://mui.com/material-ui/getting-started/templates/">templates</Link> in the
       MUI documentation.

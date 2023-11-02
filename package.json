@@ -7,5 +7,10 @@
   "devDependencies": {
     "lerna": "7.2.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "start": "lerna run start",
+    "build": "lerna run build",
+    "serve": "lerna run serve"
+  }
 }

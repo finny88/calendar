@@ -5,13 +5,14 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "7.2.0"
+    "lerna": "7.2.0",
+    "rimraf": "5.0.5"
   },
-  "dependencies": {},
   "scripts": {
     "start": "lerna run start",
     "build": "lerna run build",
     "serve": "lerna run serve",
-    "check": "lerna run check"
+    "check": "lerna run check",
+    "clean": "lerna clean -y && rimraf ./node_modules"
   }
 }

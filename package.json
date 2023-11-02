@@ -11,6 +11,7 @@
   "scripts": {
     "start": "lerna run start",
     "build": "lerna run build",
-    "serve": "lerna run serve"
+    "serve": "lerna run serve",
+    "check": "lerna run check"
   }
 }

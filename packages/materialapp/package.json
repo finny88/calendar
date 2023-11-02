@@ -19,7 +19,8 @@
     "test": "craco test",
     "eject": "react-scripts eject",
     "serve": "cross-var serve -s build -p $npm_package_config_port",
-    "check": "tsc"
+    "check": "tsc",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\""
   },
   "browserslist": {
     "production": [

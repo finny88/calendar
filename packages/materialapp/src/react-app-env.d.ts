@@ -1,12 +1,12 @@
-/// <reference types="react-scripts" />
-declare module "copyrightapp/Copyright" {
-    const Copyright: React.ComponentType
+// / <reference types="react-scripts" />
+declare module 'copyrightapp/Copyright' {
+  const Copyright: React.ComponentType
 
-    export default Copyright
+  export default Copyright
 }
 
-declare module "protipapp/ProTip" {
-    const ProTip: React.ComponentType
+declare module 'protipapp/ProTip' {
+  const ProTip: React.ComponentType
 
-    export default ProTip
+  export default ProTip
 }

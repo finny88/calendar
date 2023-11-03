@@ -8,8 +8,9 @@ module.exports = {
     'standard-with-typescript',
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
+    'plugin:prettier/recommended'
   ],
-  plugins: ['react-hooks', 'jsx-a11y'],
+  plugins: ['react-hooks', 'pretty-imports', 'jsx-a11y'],
   settings: {
     react: {
       version: 'detect',
@@ -88,6 +89,9 @@ module.exports = {
         "selector": ":matches(ImportNamespaceSpecifier[local.name='React'])",
         "message": "Wildcard import from 'react' is forbidden"
       }
-    ]
+    ],
+    // Prettier as warnings
+    'prettier/prettier': 1,
+    'pretty-imports/sorted': 1
   }
 }

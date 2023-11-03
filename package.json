@@ -15,7 +15,9 @@
     "eslint-plugin-pretty-imports": "1.3.0",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "8.0.3",
     "lerna": "7.2.0",
+    "lint-staged": "15.0.2",
     "prettier": "3.0.3",
     "rimraf": "5.0.5"
   },
@@ -26,5 +28,11 @@
     "check": "lerna run check",
     "clean": "lerna clean -y && rimraf ./node_modules",
     "lint": "lerna run lint --verbose"
+  },
+  "lint-staged": {
+    "packages/**/src/**/*.{js,tsx,ts}": [
+      "prettier --write",
+      "eslint --parser-options project:'./packages/**/tsconfig.json' --fix"
+    ]
   }
 }

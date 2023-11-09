@@ -1,10 +1,10 @@
 import React from 'react'
 import Box from '@mui/material/Box'
-import ProTip from 'protipapp/ProTip'
-import Copyright from 'copyrightapp/Copyright'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import { makeStyles } from 'tss-react/mui'
+import Copyright from 'copyrightapp/Copyright'
+import ProTip from 'protipapp/ProTip'
 
 const useStyles = makeStyles()(theme => ({
   box: {

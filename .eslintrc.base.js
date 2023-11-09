@@ -10,7 +10,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:prettier/recommended'
   ],
-  plugins: ['react-hooks', 'pretty-imports', 'jsx-a11y'],
+  plugins: ['react-hooks', 'import'],
   settings: {
     react: {
       version: 'detect',
@@ -72,26 +72,51 @@ module.exports = {
       {
         paths: [
           {
-            name: "@mui/material",
-            importNames: ["makeStyles"],
-            message: "Please import 'makeStyles' from 'tss-react/mui' instead."
+            name: '@mui/material',
+            importNames: ['makeStyles'],
+            message: 'Please import "makeStyles" from "tss-react/mui" instead.'
           },
           {
             name: '@mui/material',
-            message: "Please import default from '@mui/material/*' instead."
+            message: 'Please import default from "@mui/material/*" instead.'
           },
         ]
       }
     ],
-    "no-restricted-syntax": [
-      "error",
+    'no-restricted-syntax': [
+      'error',
       {
-        "selector": ":matches(ImportNamespaceSpecifier[local.name='React'])",
-        "message": "Wildcard import from 'react' is forbidden"
+        'selector': ':matches(ImportNamespaceSpecifier[local.name="React"])',
+        'message': 'Wildcard import from "react" is forbidden'
       }
     ],
     // Prettier as warnings
     'prettier/prettier': 1,
-    'pretty-imports/sorted': 1
+    'import/order': [
+      'warn',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+        'pathGroups': [
+          {
+            'pattern': 'react',
+            'group': 'builtin',
+            'position': 'before'
+          },
+          {
+            'pattern': 'copyrightapp/**',
+            'group': 'internal'
+          },
+          {
+            'pattern': 'protipapp/**',
+            'group': 'internal'
+          }
+        ],
+        'pathGroupsExcludedImportTypes': ['react'],
+        'alphabetize': {
+          'order': 'asc',
+          'caseInsensitive': true
+        }
+      }
+    ]
   }
 }

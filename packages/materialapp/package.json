@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "yarn lint --max-warnings=0 && rimraf build && craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "serve": "serve -s build -p $(node -p 'require(\"./package.json\").config.port')",
@@ -38,7 +38,9 @@
     "@craco/craco": "7.1.0",
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.7",
+    "cross-env": "7.0.3",
     "react-scripts": "5.0.1",
+    "rimraf": "5.0.5",
     "serve": "14.2.1",
     "typescript": "4.9.5"
   }

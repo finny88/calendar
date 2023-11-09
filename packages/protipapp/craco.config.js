@@ -2,6 +2,9 @@ const { ModuleFederationPlugin } = require("webpack").container;
 const { dependencies: deps, config: { port } } = require('./package.json')
 
 module.exports = {
+    eslint: {
+      enable: false,
+    },
     devServer: {
         port,
         open: false

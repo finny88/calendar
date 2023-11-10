@@ -1,8 +1,6 @@
 module.exports = {
-  extends: [
-    '../../.eslintrc.base'
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json",
+  extends: ['../../.eslintrc.base'],
+  parserOptions: {
+    project: './tsconfig.json',
   },
 }

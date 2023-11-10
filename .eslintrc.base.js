@@ -60,7 +60,6 @@ module.exports = {
     ],
     'max-lines': ['error', 300],
     'react/jsx-boolean-value': 1,
-    'no-duplicate-imports': 2,
     '@typescript-eslint/no-explicit-any': 0,
     'no-implicit-coercion': [
       'error',
@@ -95,7 +94,7 @@ module.exports = {
     'import/order': [
       'warn',
       {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'type'],
         'pathGroups': [
           {
             'pattern': 'react',
@@ -117,6 +116,7 @@ module.exports = {
           'caseInsensitive': true
         }
       }
-    ]
+    ],
+    'import/no-duplicates': 2
   }
 }

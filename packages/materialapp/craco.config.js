@@ -2,9 +2,6 @@ const { ModuleFederationPlugin } = require("webpack").container;
 const { dependencies: deps, config: { port } } = require('./package.json')
 
 module.exports = {
-    eslint: {
-      enable: false,
-    },
     devServer: {
         port,
     },
@@ -28,13 +25,18 @@ module.exports = {
                 }),
             ],
         },
-        configure: (webpackConfig) => ({
-          ...webpackConfig,
-          optimization: {
-            ...webpackConfig.optimization,
-            chunkIds: 'named',
-            splitChunks: false,
+        configure: (webpackConfig) => {
+          const eslintWebpackPluginIndex = webpackConfig.plugins.findIndex(({ key }) => key === 'ESLintWebpackPlugin')
+          webpackConfig.plugins[eslintWebpackPluginIndex].options.baseConfig.extends = [require.resolve('./.eslintrc.js')]
+
+          return {
+            ...webpackConfig,
+            optimization: {
+              ...webpackConfig.optimization,
+              chunkIds: 'named',
+              splitChunks: false,
+            }
           }
-        }),
+        },
     },
 }

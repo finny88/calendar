@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "yarn lint --max-warnings=0 && rimraf build && craco build",
+    "build": "rimraf build && craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "serve": "serve -s build -p $(node -p 'require(\"./package.json\").config.port')",

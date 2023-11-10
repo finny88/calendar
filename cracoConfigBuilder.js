@@ -5,7 +5,7 @@ module.exports = {
   getPackageConfig: ({ port, deps, mfParams, isShell }) => ({
     devServer: {
       port,
-      open: isShell,
+      ...(isShell ? {} : { open: false }),
     },
     webpack: {
       plugins: {

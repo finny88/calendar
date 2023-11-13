@@ -1,9 +1,19 @@
 node_modules
-dist
+
 .idea
+.vscode
 
 .cache
-packages/materialapp/build
-packages/materialapp/public/build
 .env
 
+# Yarn2
+
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+yarn-debug.log*
+yarn-error.log*

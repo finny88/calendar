@@ -6,7 +6,7 @@
         "cacheableOperations": [
           "build",
           "test",
-          "check"
+          "typecheck"
         ]
       }
     }

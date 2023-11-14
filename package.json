@@ -28,7 +28,7 @@
     "start": "lerna run start",
     "build": "lerna run build",
     "serve": "lerna run serve",
-    "check": "lerna run check",
+    "typecheck": "lerna run typecheck",
     "clean": "lerna clean -y && rimraf ./node_modules",
     "lint": "lerna run lint --verbose"
   },

@@ -19,7 +19,7 @@
     "test": "craco test",
     "eject": "react-scripts eject",
     "serve": "serve -s build -p $(node -p 'require(\"./package.json\").config.port')",
-    "check": "tsc",
+    "typecheck": "tsc",
     "lint": "eslint \"src/**/*.{js,ts,tsx}\""
   },
   "browserslist": {

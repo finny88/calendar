@@ -11,7 +11,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:prettier/recommended',
   ],
-  plugins: ['react-hooks', 'import'],
+  plugins: ['react-hooks'],
   settings: {
     react: {
       version: 'detect',
@@ -61,6 +61,11 @@ module.exports = {
           {
             name: '@mui/material',
             message: 'Please import default from "@mui/material/*" instead.',
+          },
+          {
+            name: 'react',
+            importNames: ['default'],
+            message: 'Please use named imports from "react" instead.',
           },
         ],
         patterns: [

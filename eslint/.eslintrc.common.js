@@ -37,6 +37,10 @@ module.exports = {
             position: 'before',
           },
           {
+            pattern: 'react-dom/*',
+            group: 'builtin',
+          },
+          {
             pattern: 'templates/**',
             group: 'internal',
           },
@@ -46,8 +50,10 @@ module.exports = {
           order: 'asc',
           caseInsensitive: true,
         },
+        'newlines-between': 'never',
       },
     ],
     'import/no-duplicates': 2,
+    'import/newline-after-import': 2,
   },
 }

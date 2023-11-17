@@ -1,4 +1,5 @@
-const { join } = require('path')
+const path = require('path')
+const { getPlugin, pluginByName } = require('@craco/craco')
 const { ModuleFederationPlugin } = require('webpack').container
 
 module.exports = {
@@ -37,12 +38,16 @@ module.exports = {
         ],
       },
       configure: (webpackConfig, { paths }) => {
-        const eslintWebpackPluginIndex = webpackConfig.plugins.findIndex(
-          ({ key }) => key === 'ESLintWebpackPlugin',
+        const { isFound, match: eslintWebpackPlugin } = getPlugin(
+          webpackConfig,
+          pluginByName('ESLintWebpackPlugin'),
         )
-        webpackConfig.plugins[
-          eslintWebpackPluginIndex
-        ].options.baseConfig.extends = [join(paths.appPath, '.eslintrc.js')]
+
+        if (isFound) {
+          eslintWebpackPlugin.options.baseConfig.extends = [
+            path.join(paths.appPath, '.eslintrc.js'),
+          ]
+        }
 
         return {
           ...webpackConfig,

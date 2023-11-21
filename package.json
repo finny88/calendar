@@ -30,7 +30,9 @@
     "serve": "lerna run serve",
     "typecheck": "lerna run typecheck",
     "clean": "lerna clean -y && rimraf ./node_modules",
-    "lint": "lerna run lint --verbose"
+    "lint": "lerna run lint --verbose",
+    "prepack": "yarn build",
+    "publish": "lerna publish patch --conventional-commits"
   },
   "lint-staged": {
     "packages/**/src/**/*.{js,tsx,ts}": [
